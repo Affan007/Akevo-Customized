@@ -1,0 +1,166 @@
+<form>
+  <div class="col-md-6">
+    <div ba-panel ba-panel-title="Basic Info">
+  <div class="form-group">
+    <label for="input01">Company</label>
+    <input type="text" class="form-control" id="input01" placeholder="Text">
+  </div>
+  <div class="form-group">
+    <label for="input02">First Name</label>
+    <input type="text" class="form-control" id="input02" placeholder="Text">
+  </div>
+  <div class="form-group">
+    <label for="input03">Last Name</label>
+    <!-- <input type="text" class="form-control form-control-rounded" id="input03" placeholder="Rounded Corners"> -->
+    <input type="text" class="form-control" id="input03" placeholder="Text">
+  </div>
+  <div class="form-group">
+    <label for="input04">Street Adress</label>
+    <!-- <input type="text" class="form-control" id="input04" placeholder="With help">
+    <span class="help-block sub-little-text">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
+    <input type="text" class="form-control" id="input04" placeholder="Text">
+  </div>
+  <div class="form-group">
+    <label for="input05">City</label>
+  <input type="text" class="form-control" id="input05" placeholder="Text">
+  </div>
+  <div class="form-group">
+    <label for="input05">Zip/Postal Code</label>
+  <input type="text" class="form-control" id="input05" placeholder="Text">
+  </div>
+
+  <div class="form-group">
+    <label for="textarea01">Phone</label>
+    <!-- <textarea placeholder="Default Input" class="form-control" id="textarea01"></textarea> -->
+    <input type="text" class="form-control" id="input06" placeholder="Text">
+  </div>
+  <div class="form-group">
+    <label for="textarea01">Mobile</label>
+    <!-- <textarea placeholder="Default Input" class="form-control" id="textarea01"></textarea> -->
+    <input type="text" class="form-control" id="input07" placeholder="Text">
+  </div>
+  <div class="form-group">
+      <label for="textarea09">Status</label>
+    <ui-select ng-model="selectedItem.selected"
+               class="btn-group bootstrap-select form-control"
+               ng-disabled="false"
+               append-to-body="true"
+               search-enabled="false">
+      <ui-select-match placeholder="Standard Select">
+        <span> {{$select.selected.label}}</span>
+      </ui-select-match>
+      <ui-select-choices repeat="standardItem in standardSelectItems | filter: $select.search">
+        <span ng-bind-html="standardItem.label"></span>
+      </ui-select-choices>
+    </ui-select>
+  </div>
+</div>
+</div>
+<div class="col-md-6">
+  <div ba-panel ba-panel-title="Products">
+    <div class="form-group">
+      <label class="checkbox-inline custom-checkbox nowrap">
+        <input type="checkbox" id="inlineCheckbox01" value="ipTV">
+        <span>IP TV</span>
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="checkbox-inline custom-checkbox nowrap">
+        <input type="checkbox" id="inlineCheckbox02" value="subscription">
+        <span>	IPTV/Phone Subscriptions</span>
+      </label>
+    </div>
+  </div>
+<div ba-panel ba-panel-title="Commission Structure">
+
+  <div class="form-group">
+    <div class="col-xs-12">
+    <label for="textarea09">Long Distance Calling</label>
+    </div>
+    <div class="col-md-6">
+    <ui-select ng-model="selectedcommision"
+               class="btn-group bootstrap-select form-control"
+               ng-disabled="false"
+               append-to-body="true"
+               search-enabled="false">
+      <ui-select-match placeholder="Standard Select">
+        <span> {{$select.selected.label}}</span>
+      </ui-select-match>
+      <ui-select-choices repeat="com in commisionSelectItems | filter: $select.search">
+        <span ng-bind-html="com.label"></span>
+      </ui-select-choices>
+    </ui-select>
+  </div>
+  <div class="col-md-6">
+      <input type="text" class="form-control" id="longDistanceCalling" placeholder="Text">
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-xs-12">
+  <label for="textarea09">International Topup</label>
+  </div>
+  <div class="col-md-6">
+  <ui-select ng-model="selectedcommision"
+             class="btn-group bootstrap-select form-control"
+             ng-disabled="false"
+             append-to-body="true"
+             search-enabled="false">
+    <ui-select-match placeholder="Standard Select">
+      <span> {{$select.selected.label}}</span>
+    </ui-select-match>
+    <ui-select-choices repeat="com in commisionSelectItems | filter: $select.search">
+      <span ng-bind-html="com.label"></span>
+    </ui-select-choices>
+  </ui-select>
+</div>
+<div class="col-md-6">
+    <input type="text" class="form-control" id="InternationalTopUp" placeholder="Text">
+</div>
+</div>
+
+<div class="form-group">
+  <div class="col-xs-12">
+  <label for="textarea09">Domestic Topup</label>
+  </div>
+  <div class="col-md-6">
+  <ui-select ng-model="selectedcommision"
+             class="btn-group bootstrap-select form-control"
+             ng-disabled="false"
+             append-to-body="true"
+             search-enabled="false">
+    <ui-select-match placeholder="Standard Select">
+      <span> {{$select.selected.label}}</span>
+    </ui-select-match>
+    <ui-select-choices repeat="com in commisionSelectItems | filter: $select.search">
+      <span ng-bind-html="com.label"></span>
+    </ui-select-choices>
+  </ui-select>
+</div>
+<div class="col-md-6">
+    <input type="text" class="form-control" id="DomesticTopUp" placeholder="Text">
+</div>
+</div>
+</div>
+
+<div ba-panel ba-panel-title="Login Details">
+  <div class="form-group">
+    <label for="input01">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="email">
+  </div>
+  <div class="form-group">
+    <label for="input01">Password</label>
+    <input type="text" class="form-control" id="password" placeholder="password">
+  </div>
+  <div class="form-group">
+    <label for="input01">IP Restriction</label>
+    <input type="text" class="form-control" id="IPRest" placeholder="IP Adress">
+  </div>
+</div>
+
+</div>
+<div class="col-xs-12">
+<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="btn btn-warning">Clear</button>
+</div>
+</form>

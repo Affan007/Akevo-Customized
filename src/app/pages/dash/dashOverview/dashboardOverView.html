@@ -1,0 +1,42 @@
+<div class="row" ng-init="Overview()">
+  <div class="row">
+<div class="col-md-3 col-lg-3">
+  <h1 class="salesH1"> All Sales</h1>
+</div>
+<div ng-repeat="sales in SalesOverview">
+  <div class="col-md-2 col-lg-2">
+    <div ba-panel ba-panel-title="Done" >
+      <h1>{{sales.count}}</h1>
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div ba-panel ba-panel-title="In Progress" >
+      <h1>{{sales.inProgress}}</h1>
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div ba-panel ba-panel-title="Total Amount" >
+      <h1>{{sales.totalAmount}}</h1>
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div ba-panel ba-panel-title="Cleared Amount" >
+      <h1>{{sales.clearedAmount}}</h1>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3 col-lg-3">
+<h1 class="salesH1"> Partners</h1>
+</div>
+<div class="col-md-3 col-lg-3" ng-repeat="(key, value) in stats">
+  <div ba-panel ba-panel-title="{{key}}" >
+    <h1>USD {{value}}</h1>
+
+  </div>
+</div>
+</div>
+
+</div>

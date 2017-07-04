@@ -1,0 +1,26 @@
+<table class="table table-bordered table-hover table-condensed" st-table="rowCollection"  ng-init=summary();>
+  <tr >
+    <td>Resselrs</td>
+    <td ng-repeat="package in packages">{{package.description}}</td>
+    <!-- <td>last name</td>
+    <td>birth date</td>
+    <td>balance</td>
+    <td>email</td> -->
+  <!-- </tr> -->
+</tr>
+  <tr ng-repeat="(key, value) in Sales">
+    <td> {{value.agent_name}}</td>
+    <td >
+      <tr>
+        <td>
+          {{value}}
+        </td>
+      </tr>
+    </td>
+		<!-- <td>{{row.firstName}}</td>
+		<td>{{row.lastName}}</td>
+		<td>{{row.birthDate}}</td>
+		<td>{{row.balance}}</td>
+		<td>{{row.email}}</td> -->
+	</tr>
+</table>
