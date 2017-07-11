@@ -10,6 +10,7 @@ angular.module('BlurAdmin', [
   'toastr',
   'smart-table',
   'payment',
+  'ngMaterial',
   "xeditable",
   'ui.slimscroll',
   'ngJsTree',
